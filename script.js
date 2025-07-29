@@ -80,19 +80,47 @@ contactForm.addEventListener("submit", async (e) => {
   const email = formData.get("email")
   const message = formData.get("message")
 
-  // Here you would integrate with EmailJS or your preferred email service
-  // For now, we'll show a simple alert
+  // Show loading state
+  const submitBtn = contactForm.querySelector('button[type="submit"]')
+  const btnText = submitBtn.querySelector(".btn-text")
+  const spinner = submitBtn.querySelector(".loading-spinner")
+
+  btnText.style.display = "none"
+  spinner.style.display = "block"
+  submitBtn.disabled = true
 
   try {
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Simulate form submission (replace with actual EmailJS integration)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    alert(`Thank you ${name}! Your message has been sent successfully. I'll get back to you soon.`)
+    // Show success message
+    showAlert(`Thank you ${name}! Your message has been sent successfully. I'll get back to you soon.`, "success")
     contactForm.reset()
   } catch (error) {
-    alert("Sorry, there was an error sending your message. Please try again.")
+    // Show error message
+    showAlert("Sorry, there was an error sending your message. Please try again.", "error")
+  } finally {
+    // Reset button state
+    btnText.style.display = "inline"
+    spinner.style.display = "none"
+    submitBtn.disabled = false
   }
 })
+
+// Alert function
+function showAlert(message, type = "info") {
+  const alertDiv = document.createElement("div")
+  alertDiv.className = `alert alert-${type} animate-fade-in`
+  alertDiv.textContent = message
+
+  // Insert after the form
+  contactForm.parentNode.insertBefore(alertDiv, contactForm.nextSibling)
+
+  // Remove after 5 seconds
+  setTimeout(() => {
+    alertDiv.remove()
+  }, 5000)
+}
 
 // Intersection Observer for Animations
 const observerOptions = {
@@ -154,7 +182,7 @@ document.querySelectorAll(".project-card").forEach((card) => {
 document.querySelectorAll(".project-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     // Here you would open the actual project links
-    alert("This would open the project repository or live demo!")
+    showAlert("This would open the project repository or live demo!", "info")
   })
 })
 
@@ -162,11 +190,11 @@ document.querySelectorAll(".project-btn").forEach((btn) => {
 document.querySelectorAll(".btn-success").forEach((btn) => {
   btn.addEventListener("click", () => {
     // Here you would open the actual certificate links
-    alert("This would open the certificate!")
+    showAlert("This would open the certificate!", "info")
   })
 })
 
-// Typing effect for hero subtitle (optional enhancement)
+// Typing effect for hero subtitle
 function typeWriter(element, text, speed = 100) {
   let i = 0
   element.innerHTML = ""
@@ -232,3 +260,79 @@ style.textContent = `
     }
 `
 document.head.appendChild(style)
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  // ESC key closes mobile menu
+  if (e.key === "Escape" && navMenu.classList.contains("active")) {
+    hamburger.classList.remove("active")
+    navMenu.classList.remove("active")
+  }
+
+  // Arrow keys for carousel navigation
+  if (e.key === "ArrowLeft") {
+    const prevSlide = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1
+    goToSlide(prevSlide)
+  } else if (e.key === "ArrowRight") {
+    nextSlide()
+  }
+})
+
+// Lazy loading for images
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target
+      img.src = img.dataset.src || img.src
+      img.classList.remove("lazy")
+      imageObserver.unobserve(img)
+    }
+  })
+})
+
+document.querySelectorAll("img").forEach((img) => {
+  imageObserver.observe(img)
+})
+
+// Performance optimization: Throttle scroll events
+function throttle(func, wait) {
+  let timeout
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
+
+// Apply throttling to scroll events
+const throttledScrollHandler = throttle(() => {
+  // Scroll progress bar
+  const scrollTop = document.documentElement.scrollTop
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  const scrollProgress = (scrollTop / scrollHeight) * 100
+  document.getElementById("progress-bar").style.width = scrollProgress + "%"
+
+  // Active navigation
+  const sections = document.querySelectorAll("section")
+  const navLinks = document.querySelectorAll(".nav-link")
+
+  let current = ""
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop
+    if (scrollY >= sectionTop - 200) {
+      current = section.getAttribute("id")
+    }
+  })
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active")
+    if (link.getAttribute("href").substring(1) === current) {
+      link.classList.add("active")
+    }
+  })
+}, 16) // ~60fps
+
+window.addEventListener("scroll", throttledScrollHandler)

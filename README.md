@@ -41,11 +41,16 @@ A modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScr
 
 \`\`\`
 portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles and animations
-├── script.js           # JavaScript functionality
-├── package.json        # Project configuration
-└── README.md          # Project documentation
+├── index.html              # Main HTML file
+├── styles.css              # Main stylesheet
+├── script.js               # JavaScript functionality
+├── css/
+│   ├── animations.css      # Animation keyframes and classes
+│   ├── components.css      # Reusable component styles
+│   ├── responsive.css      # Responsive design system
+│   └── utilities.css       # Utility classes
+├── package.json            # Project configuration
+└── README.md              # Project documentation
 \`\`\`
 
 ## 🚀 Getting Started
@@ -79,11 +84,11 @@ To enable the contact form:
 // Replace the existing form handler with:
 emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm, 'YOUR_PUBLIC_KEY')
     .then(() => {
-        alert(`Thank you ${name}! Your message has been sent successfully.`);
+        showAlert(`Thank you ${name}! Your message has been sent successfully.`, 'success');
         contactForm.reset();
     })
     .catch(() => {
-        alert('Sorry, there was an error sending your message.');
+        showAlert('Sorry, there was an error sending your message.', 'error');
     });
 \`\`\`
 
@@ -130,7 +135,7 @@ Update the CSS custom properties in `styles.css`:
 - Update social media links
 
 ### Animations
-- Adjust animation durations in CSS
+- Adjust animation durations in `css/animations.css`
 - Add new keyframe animations
 - Modify hover effects and transitions
 
@@ -144,11 +149,11 @@ Update the CSS custom properties in `styles.css`:
 
 ## 🔧 Performance Features
 
-- **Optimized images** with proper sizing
+- **Optimized images** with lazy loading
 - **Minimal dependencies** (only Font Awesome CDN)
-- **Efficient CSS** with no unused styles
+- **Efficient CSS** with modular architecture
 - **Smooth animations** with CSS transforms
-- **Lazy loading** ready for images
+- **Throttled scroll events** for better performance
 
 ## 📄 License
 
@@ -164,3 +169,118 @@ MIT License - feel free to use this template for your own portfolio!
 ---
 
 **Built with ❤️ using vanilla web technologies**
+\`\`\`
+
+```plaintext file=".gitignore"
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+.env.local
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Build directories
+dist/
+build/
