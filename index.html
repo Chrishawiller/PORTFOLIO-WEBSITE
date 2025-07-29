@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrisha Willer M - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Chrisha Willer M</div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Chrisha Willer M</h1>
+                    <h2 class="hero-subtitle">Full Stack Developer</h2>
+                    <p class="hero-description">"I build modern web applications that solve real-world problems."</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">Let's Work Together</button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="https://via.placeholder.com/320x320/4F46E5/FFFFFF?text=Profile" alt="Chrisha Willer M" class="profile-img">
+                        <div class="wave-emoji">👋</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <p class="about-text">
+                    I'm a passionate full-stack developer (fresher) with internship experience in React.js, UI/UX, and IT
+                    support. I love building responsive, user-friendly apps using Java, Spring Boot, and React.
+                </p>
+                <div class="keywords-grid">
+                    <div class="keyword-card">Full Stack</div>
+                    <div class="keyword-card">Java</div>
+                    <div class="keyword-card">Spring Boot</div>
+                    <div class="keyword-card">MongoDB</div>
+                    <div class="keyword-card">React</div>
+                    <div class="keyword-card">AI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Skills & Technologies</h2>
+                <p class="section-subtitle">My technical toolkit for building modern web applications</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">L</div>
+                            <h3 class="skill-title">Languages</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/F59E0B/FFFFFF?text=J" alt="Java">
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/3B82F6/FFFFFF?text=P" alt="Python">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/EAB308/FFFFFF?text=JS" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">F</div>
+                            <h3 class="skill-title">Frontend</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/E34F26/FFFFFF?text=H" alt="HTML5">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/1572B6/FFFFFF?text=C" alt="CSS3">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/61DAFB/000000?text=R" alt="ReactJS">
+                                <span>ReactJS</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/7952B3/FFFFFF?text=B" alt="Bootstrap">
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">B</div>
+                            <h3 class="skill-title">Backend</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/6DB33F/FFFFFF?text=S" alt="Spring Boot">
+                                <span>Spring Boot</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/F89820/FFFFFF?text=J" alt="JSP">
+                                <span>JSP</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/777BB4/FFFFFF?text=P" alt="PHP">
+                                <span>PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">D</div>
+                            <h3 class="skill-title">Databases</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/4479A1/FFFFFF?text=M" alt="MySQL">
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/47A248/FFFFFF?text=M" alt="MongoDB">
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">T</div>
+                            <h3 class="skill-title">Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/F05032/FFFFFF?text=G" alt="Git">
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/F24E1E/FFFFFF?text=F" alt="Figma">
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/007ACC/FFFFFF?text=V" alt="VS Code">
+                                <span>VS Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/000000/FFFFFF?text=I" alt="IntelliJ">
+                                <span>IntelliJ</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/FB7A24/FFFFFF?text=X" alt="XAMPP">
+                                <span>XAMPP</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="https://via.placeholder.com/40x40/1B6EC8/FFFFFF?text=N" alt="NetBeans">
+                                <span>NetBeans</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Featured Projects</h2>
+                <p class="section-subtitle">Here are some of the projects I've worked on</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200/3B82F6/FFFFFF?text=Travel+Booking" alt="Travel Booking Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Travel Booking Platform</h3>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JSP</span>
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">XML</span>
+                        </div>
+                        <p class="project-description">
+                            Built a responsive platform for booking tours with payment integration and user session management.
+                        </p>
+                        <button class="btn btn-outline project-btn">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200/10B981/FFFFFF?text=AI+Proctoring" alt="AI Proctoring System">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Proctoring System</h3>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">CNN</span>
+                        </div>
+                        <p class="project-description">
+                            Developed a system for real-time face recognition and anomaly detection to automate online assessments.
+                        </p>
+                        <button class="btn btn-outline project-btn">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Video+Streaming" alt="Video Streaming UI">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Video Streaming UI</h3>
+                        <div class="project-tags">
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <p class="project-description">
+                            Created a responsive YouTube-like UI with dynamic routing, reusable components, and smooth navigation.
+                        </p>
+                        <button class="btn btn-outline project-btn">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Certifications & Achievements</h2>
+                <p class="section-subtitle">Professional certifications that validate my expertise</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- CSS Carousel -->
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide active">
+                        <div class="cert-card">
+                            <div class="cert-image">
+                                <img src="https://via.placeholder.com/300x200/FF9500/FFFFFF?text=AWS+Certificate" alt="AWS Cloud Practitioner">
+                                <div class="cert-badge">🏆</div>
+                            </div>
+                            <div class="cert-content">
+                                <h3 class="cert-title">AWS Cloud Practitioner Essentials</h3>
+                                <p class="cert-issuer">AWS SkillBuilder • 2024</p>
+                                <button class="btn btn-success">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="cert-card">
+                            <div class="cert-image">
+                                <img src="https://via.placeholder.com/300x200/DC2626/FFFFFF?text=Java+Certificate" alt="Java Full Stack">
+                                <div class="cert-badge">🏆</div>
+                            </div>
+                            <div class="cert-content">
+                                <h3 class="cert-title">Java Full Stack</h3>
+                                <p class="cert-issuer">Network Systems • 2024</p>
+                                <button class="btn btn-success">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="cert-card">
+                            <div class="cert-image">
+                                <img src="https://via.placeholder.com/300x200/7C3AED/FFFFFF?text=Python+Certificate" alt="Python 100 Days">
+                                <div class="cert-badge">🏆</div>
+                            </div>
+                            <div class="cert-content">
+                                <h3 class="cert-title">Python 100 Days of Code</h3>
+                                <p class="cert-issuer">Udemy • 2023</p>
+                                <button class="btn btn-success">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" onclick="goToSlide(0)"></button>
+                    <button class="indicator" onclick="goToSlide(1)"></button>
+                    <button class="indicator" onclick="goToSlide(2)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your next project or opportunity</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Send me a message</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-section">
+                        <h3 class="contact-section-title">Connect with me</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>chrisha.willer@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Your Location</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Chrisha Willer M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

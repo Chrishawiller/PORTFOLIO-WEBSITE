@@ -1,12 +1,26 @@
 {
   "name": "chrisha-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Personal portfolio website for Chrisha Willer M - Full Stack Developer",
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "full-stack",
+    "html",
+    "css",
+    "javascript",
+    "responsive"
+  ],
+  "license": "MIT",
+  "author": "Chrisha Willer M",
+  "main": "index.html",
   "scripts": {
-    "build": "next build",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Ready for deployment to any static hosting service'",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "live-server --port=3000"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -64,6 +78,7 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "live-server": "^1.2.2",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
