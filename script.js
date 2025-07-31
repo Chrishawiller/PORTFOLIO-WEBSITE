@@ -90,14 +90,20 @@ contactForm.addEventListener("submit", async (e) => {
   submitBtn.disabled = true
 
   try {
-    // Simulate form submission (replace with actual EmailJS integration)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+ await emailjs.sendForm(
+  "service_portfolio",      
+  "template_yff40iq",        
+  contactForm
+)
+
 
     // Show success message
     showAlert(`Thank you ${name}! Your message has been sent successfully. I'll get back to you soon.`, "success")
     contactForm.reset()
   } catch (error) {
     // Show error message
+    console.error("EmailJS Error:", error);
+
     showAlert("Sorry, there was an error sending your message. Please try again.", "error")
   } finally {
     // Reset button state
