@@ -45,9 +45,11 @@
   }
 
   .profile-img {
-    width: 200px;
-    height: 200px;
-  }
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
   .wave-emoji {
     width: 40px;
@@ -164,9 +166,12 @@
   }
 
   .profile-img {
-    width: 250px;
+    width: 180px;
     height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
   }
+
 
   .keywords-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -211,11 +216,13 @@
   .hero-subtitle {
     font-size: 1.75rem;
   }
-
-  .profile-img {
-    width: 280px;
+.profile-img {
+    width: 200px;
     height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
   }
+
 
   .keywords-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -244,9 +251,11 @@
     font-size: 2rem;
   }
 
-  .profile-img {
-    width: 300px;
+    .profile-img {
+    width: 220px;
     height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .keywords-grid {
@@ -277,8 +286,10 @@
   }
 
   .profile-img {
-    width: 320px;
+    width: 240px;
     height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .keywords-grid {
